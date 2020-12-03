@@ -1,0 +1,146 @@
+#:kivy 1.10.0
+
+<ThirdScreen>:
+    name: '_third_screen_'
+    BoxLayout:
+        canvas.before:
+            Color:
+                rgba: rgba('#72B7CD')
+            Rectangle:
+                pos: self.pos
+                size: self.size
+
+        GridLayout:
+            size_hint_x: 1
+            size_hint_y: 1
+            rows: 7
+            cols: 3
+            Button:
+                background_color: 1, 1, 1, .01
+                size: self.size
+                pos: self.pos
+                on_press: root.drinks_screen_selected()
+                Image:
+                    source: 'assets/buttons/SNACKS.png'
+                    x: self.parent.x
+                    y: self.parent.y
+
+            Button:
+                background_color: 1, 1, 1, .01
+                size: self.size
+                pos: self.pos
+                on_press: root.drinks_screen_selected()
+                Image:
+                    source: 'assets/buttons/DRINKS-P.png'
+                    x: self.parent.x
+                    y: self.parent.y
+            
+            Button:
+                background_color: 1, 1, 1, .01
+                size: self.size
+                pos: self.pos
+                on_press: root.drinks_screen_selected()
+                Image:
+                    source: 'assets/buttons/HOTFOOD.png'
+                    x: self.parent.x
+                    y: self.parent.y
+                
+
+            Button:
+                background_color: 1, 1, 1, .01
+                size: self.size
+                pos: self.pos
+                on_press: root.switch_screen()
+                Image:
+                    source: 'assets/buttons/ArrowLeft.png'
+                    x: self.parent.x
+                    y: self.parent.y
+
+            Label:
+                id: running_total
+                text: '$ --.-- '
+                pos: self.pos
+                size: self.size
+                font_size: '50px'
+            
+            Button:
+                background_color: 1, 1, 1, .01
+                size: self.size
+                pos: self.pos
+                on_press: root.drinks_screen_selected()
+                Image:
+                    source: 'assets/buttons/ArrowRight.png'
+                    x: self.parent.x
+                    y: self.parent.y
+
+            Button:
+                background_color: 1, 1, 1, .01
+                size: self.size
+                pos: self.pos
+                on_press: root.add_to_total('raze')
+                # on_release: root.switch_screen('_screen_two_')
+                Image:
+                    source: 'assets/buttons/RAZE.png'
+                    x: self.parent.x
+                    y: self.parent.y
+            
+            Button:
+                background_color: 1, 1, 1, .01
+                size: self.size
+                pos: self.pos
+                on_press: root.add_to_total('bang')
+                Image:
+                    source: 'assets/buttons/BANG.png'
+                    x: self.parent.x
+                    y: self.parent.y
+            
+            Button:
+                background_color: 1, 1, 1, .01
+                size: self.size 
+                pos: self.pos
+                on_press: root.add_to_total('electro life')
+                Image:
+                    source: 'assets/buttons/ELECTROLIFE.png'
+                    x: self.parent.x
+                    y: self.parent.y
+
+            Button:
+                background_color: 1, 1, 1, .01
+                size: self.size
+                pos: self.pos
+                on_press: root.add_to_total('coconut water')
+                Image:
+                    source: 'assets/buttons/COCONUTWATER.png'
+                    x: self.parent.x
+                    y: self.parent.y
+            
+            Button:
+                background_color: 1, 1, 1, .01
+                size: self.size
+                pos: self.pos
+                on_press: root.add_to_total('5 hour')
+                Image:
+                    source: 'assets/buttons/5HOUR.png'
+                    x: self.parent.x
+                    y: self.parent.y
+
+            Widget:
+
+            Button:
+                background_color: 1, 1, 1, .01
+                size: self.size
+                pos: self.pos
+                Image:
+                    source: 'assets/buttons/receipt_button.png'
+                    x: self.parent.x
+                    y: self.parent.y
+            
+            Button:
+                background_color: 1, 1, 1, .01
+                size: self.size
+                pos: self.pos
+                on_press: root.switch_screen('_screen_two_')
+                Image:
+                    source: 'assets/buttons/RETAIL.png'
+                    x: self.parent.x
+                    y: self.parent.y
