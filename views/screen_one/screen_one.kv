@@ -26,6 +26,8 @@
                     x: self.parent.x
                     y: self.parent.y
 
+            Widget:
+
             Button:
                 background_color: 1, 1, 1, .01
                 size: self.size
@@ -44,19 +46,8 @@
                 Image:
                     source: 'assets/buttons/HOTFOOD.png'
                     x: self.parent.x
-                    y: self.parent.y
-                
-
-            Button:
-                background_color: 1, 1, 1, .01
-                size: self.size
-                pos: self.pos
-                on_press: root.switch_screen()
-                Image:
-                    source: 'assets/buttons/ArrowLeft.png'
-                    x: self.parent.x
-                    y: self.parent.y
-
+                    y: self.parent.y            
+            
             Label:
                 id: running_total
                 text: '$ --.-- '
@@ -68,11 +59,15 @@
                 background_color: 1, 1, 1, .01
                 size: self.size
                 pos: self.pos
-                on_press: root.drinks_screen_selected()
+                on_press: root.retail_screen_selected()
                 Image:
-                    source: 'assets/buttons/ArrowRight.png'
+                    source: 'assets/buttons/RETAIL.png'
                     x: self.parent.x
                     y: self.parent.y
+                
+
+
+            
 
             Button:
                 background_color: 1, 1, 1, .01
@@ -206,12 +201,3 @@
                     x: self.parent.x
                     y: self.parent.y
             
-            Button:
-                background_color: 1, 1, 1, .01
-                size: self.size
-                pos: self.pos
-                on_press: root.switch_screen('_screen_two_')
-                Image:
-                    source: 'assets/buttons/RETAIL.png'
-                    x: self.parent.x
-                    y: self.parent.y

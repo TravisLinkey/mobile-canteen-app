@@ -19,12 +19,14 @@ class FirstScreen(Screen):
 
     def drinks_screen_selected(self):
         self.app.root.switch_screen('_second_screen_')
-
-    def food_screen_selected(self):
-        self.app.root.switch_screen('_third_screen_')
-
+    
     def retail_screen_selected(self):
+        self.app.root.switch_screen('_third_screen_')
+    
+    def food_screen_selected(self):
         self.app.root.switch_screen('_fourth_screen_')
+
+
 
     def receipt_screen_selected(self):
         self.app.root.switch_screen('_fifth_screen_')
